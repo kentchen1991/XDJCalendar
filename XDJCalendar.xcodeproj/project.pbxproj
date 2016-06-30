@@ -8,15 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		508F7C6B76E6CFAD221EDEE8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC64F481F9DD431D9A43E69 /* libPods.a */; };
+		5C1F5EBC1D24F03D00C11211 /* XDJCalendarSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F5EBB1D24F03D00C11211 /* XDJCalendarSegment.m */; };
+		5C1F5EBF1D24F1D000C11211 /* XDJCalendarSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F5EBE1D24F1D000C11211 /* XDJCalendarSelectCell.m */; };
+		5C1F5EC21D24F95F00C11211 /* CustomerServices@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1F5EC01D24F95F00C11211 /* CustomerServices@2x.png */; };
+		5C1F5EC31D24F95F00C11211 /* CustomerServices@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1F5EC11D24F95F00C11211 /* CustomerServices@3x.png */; };
+		5C1F5EC71D25015400C11211 /* XDJSelectPickViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F5EC61D25015400C11211 /* XDJSelectPickViewModel.m */; };
+		5C1F5ECA1D25030C00C11211 /* XDJSelectCalendarPickModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1F5EC91D25030C00C11211 /* XDJSelectCalendarPickModel.m */; };
 		5C6679E71D237ABC00B557BE /* XDJIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6679E61D237ABC00B557BE /* XDJIndicatorView.m */; };
 		5C6679ED1D23B0E600B557BE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6679EC1D23B0E600B557BE /* UIView+Frame.m */; };
 		5C6679F11D23C7EA00B557BE /* XDJCalendarSelectVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6679F01D23C7EA00B557BE /* XDJCalendarSelectVIew.m */; };
-		5C6679F41D23C9EE00B557BE /* XDJCalendarPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6679F31D23C9EE00B557BE /* XDJCalendarPickerView.m */; };
 		5C6679F91D23D00500B557BE /* comment_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6679F51D23D00500B557BE /* comment_normal@2x.png */; };
 		5C6679FA1D23D00500B557BE /* comment_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6679F61D23D00500B557BE /* comment_normal@3x.png */; };
 		5C6679FB1D23D00500B557BE /* comment_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6679F71D23D00500B557BE /* comment_select@2x.png */; };
 		5C6679FC1D23D00500B557BE /* comment_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6679F81D23D00500B557BE /* comment_select@3x.png */; };
 		5C667A001D23D0D800B557BE /* XDJCalendarPickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6679FF1D23D0D800B557BE /* XDJCalendarPickCell.m */; };
+		5C6B905D1D24B542008301B1 /* XDJCalendarPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B905C1D24B542008301B1 /* XDJCalendarPickView.m */; };
 		5C8622EF1D22544F008098E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8622EE1D22544F008098E3 /* main.m */; };
 		5C8622F21D22544F008098E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8622F11D22544F008098E3 /* AppDelegate.m */; };
 		5C8622F51D22544F008098E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8622F41D22544F008098E3 /* ViewController.m */; };
@@ -57,20 +63,32 @@
 
 /* Begin PBXFileReference section */
 		204CF32E69585D56C16CAAFD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5C1F5EBA1D24F03D00C11211 /* XDJCalendarSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJCalendarSegment.h; sourceTree = "<group>"; };
+		5C1F5EBB1D24F03D00C11211 /* XDJCalendarSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJCalendarSegment.m; sourceTree = "<group>"; };
+		5C1F5EBD1D24F1D000C11211 /* XDJCalendarSelectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJCalendarSelectCell.h; sourceTree = "<group>"; };
+		5C1F5EBE1D24F1D000C11211 /* XDJCalendarSelectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJCalendarSelectCell.m; sourceTree = "<group>"; };
+		5C1F5EC01D24F95F00C11211 /* CustomerServices@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomerServices@2x.png"; sourceTree = "<group>"; };
+		5C1F5EC11D24F95F00C11211 /* CustomerServices@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomerServices@3x.png"; sourceTree = "<group>"; };
+		5C1F5EC51D25015400C11211 /* XDJSelectPickViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJSelectPickViewModel.h; sourceTree = "<group>"; };
+		5C1F5EC61D25015400C11211 /* XDJSelectPickViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJSelectPickViewModel.m; sourceTree = "<group>"; };
+		5C1F5EC81D25030C00C11211 /* XDJSelectCalendarPickModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJSelectCalendarPickModel.h; sourceTree = "<group>"; };
+		5C1F5EC91D25030C00C11211 /* XDJSelectCalendarPickModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJSelectCalendarPickModel.m; sourceTree = "<group>"; };
+		5C1F5ECB1D25099100C11211 /* XDJCalendarNotif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDJCalendarNotif.h; sourceTree = "<group>"; };
+		5C1F5ECC1D250F3600C11211 /* XDJSelectCalendarType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XDJSelectCalendarType.h; sourceTree = "<group>"; };
 		5C6679E51D237ABC00B557BE /* XDJIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJIndicatorView.h; sourceTree = "<group>"; };
 		5C6679E61D237ABC00B557BE /* XDJIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJIndicatorView.m; sourceTree = "<group>"; };
 		5C6679EB1D23B0E600B557BE /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		5C6679EC1D23B0E600B557BE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		5C6679EF1D23C7EA00B557BE /* XDJCalendarSelectVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJCalendarSelectVIew.h; sourceTree = "<group>"; };
 		5C6679F01D23C7EA00B557BE /* XDJCalendarSelectVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJCalendarSelectVIew.m; sourceTree = "<group>"; };
-		5C6679F21D23C9EE00B557BE /* XDJCalendarPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJCalendarPickerView.h; sourceTree = "<group>"; };
-		5C6679F31D23C9EE00B557BE /* XDJCalendarPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJCalendarPickerView.m; sourceTree = "<group>"; };
 		5C6679F51D23D00500B557BE /* comment_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment_normal@2x.png"; sourceTree = "<group>"; };
 		5C6679F61D23D00500B557BE /* comment_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment_normal@3x.png"; sourceTree = "<group>"; };
 		5C6679F71D23D00500B557BE /* comment_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment_select@2x.png"; sourceTree = "<group>"; };
 		5C6679F81D23D00500B557BE /* comment_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "comment_select@3x.png"; sourceTree = "<group>"; };
 		5C6679FE1D23D0D800B557BE /* XDJCalendarPickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJCalendarPickCell.h; sourceTree = "<group>"; };
 		5C6679FF1D23D0D800B557BE /* XDJCalendarPickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJCalendarPickCell.m; sourceTree = "<group>"; };
+		5C6B905B1D24B542008301B1 /* XDJCalendarPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDJCalendarPickView.h; sourceTree = "<group>"; };
+		5C6B905C1D24B542008301B1 /* XDJCalendarPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDJCalendarPickView.m; sourceTree = "<group>"; };
 		5C8622EA1D22544E008098E3 /* XDJCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDJCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8622EE1D22544F008098E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C8622F01D22544F008098E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,11 +151,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1F5EC41D2500C700C11211 /* SelectDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5C1F5EC51D25015400C11211 /* XDJSelectPickViewModel.h */,
+				5C1F5EC61D25015400C11211 /* XDJSelectPickViewModel.m */,
+				5C1F5EC81D25030C00C11211 /* XDJSelectCalendarPickModel.h */,
+				5C1F5EC91D25030C00C11211 /* XDJSelectCalendarPickModel.m */,
+				5C1F5ECB1D25099100C11211 /* XDJCalendarNotif.h */,
+				5C1F5ECC1D250F3600C11211 /* XDJSelectCalendarType.h */,
+			);
+			name = SelectDataSource;
+			sourceTree = "<group>";
+		};
 		5C6679EE1D23C79000B557BE /* SelectView */ = {
 			isa = PBXGroup;
 			children = (
 				5C6679EF1D23C7EA00B557BE /* XDJCalendarSelectVIew.h */,
 				5C6679F01D23C7EA00B557BE /* XDJCalendarSelectVIew.m */,
+				5C1F5EBA1D24F03D00C11211 /* XDJCalendarSegment.h */,
+				5C1F5EBB1D24F03D00C11211 /* XDJCalendarSegment.m */,
+				5C1F5EBD1D24F1D000C11211 /* XDJCalendarSelectCell.h */,
+				5C1F5EBE1D24F1D000C11211 /* XDJCalendarSelectCell.m */,
 			);
 			name = SelectView;
 			sourceTree = "<group>";
@@ -145,10 +180,10 @@
 		5C6679FD1D23D09200B557BE /* PickView */ = {
 			isa = PBXGroup;
 			children = (
-				5C6679F21D23C9EE00B557BE /* XDJCalendarPickerView.h */,
-				5C6679F31D23C9EE00B557BE /* XDJCalendarPickerView.m */,
 				5C6679FE1D23D0D800B557BE /* XDJCalendarPickCell.h */,
 				5C6679FF1D23D0D800B557BE /* XDJCalendarPickCell.m */,
+				5C6B905B1D24B542008301B1 /* XDJCalendarPickView.h */,
+				5C6B905C1D24B542008301B1 /* XDJCalendarPickView.m */,
 			);
 			name = PickView;
 			sourceTree = "<group>";
@@ -185,6 +220,8 @@
 				5C8622F41D22544F008098E3 /* ViewController.m */,
 				5C6679EB1D23B0E600B557BE /* UIView+Frame.h */,
 				5C6679EC1D23B0E600B557BE /* UIView+Frame.m */,
+				5C1F5EC01D24F95F00C11211 /* CustomerServices@2x.png */,
+				5C1F5EC11D24F95F00C11211 /* CustomerServices@3x.png */,
 				5C6679F51D23D00500B557BE /* comment_normal@2x.png */,
 				5C6679F61D23D00500B557BE /* comment_normal@3x.png */,
 				5C6679F71D23D00500B557BE /* comment_select@2x.png */,
@@ -233,6 +270,7 @@
 		5C8623201D225467008098E3 /* XDJCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				5C1F5EC41D2500C700C11211 /* SelectDataSource */,
 				5C6679FD1D23D09200B557BE /* PickView */,
 				5C6679EE1D23C79000B557BE /* SelectView */,
 				5C8623391D228172008098E3 /* DAYUtils.h */,
@@ -376,6 +414,8 @@
 			files = (
 				5C8622FD1D22544F008098E3 /* LaunchScreen.storyboard in Resources */,
 				5C8623321D225734008098E3 /* prev@3x.png in Resources */,
+				5C1F5EC21D24F95F00C11211 /* CustomerServices@2x.png in Resources */,
+				5C1F5EC31D24F95F00C11211 /* CustomerServices@3x.png in Resources */,
 				5C8622FA1D22544F008098E3 /* Assets.xcassets in Resources */,
 				5C86232C1D22572D008098E3 /* next@3x.png in Resources */,
 				5C6679FB1D23D00500B557BE /* comment_select@2x.png in Resources */,
@@ -460,15 +500,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C8622F51D22544F008098E3 /* ViewController.m in Sources */,
+				5C6B905D1D24B542008301B1 /* XDJCalendarPickView.m in Sources */,
 				5C8623261D2254DD008098E3 /* XDJCalendarNavgationBar.m in Sources */,
+				5C1F5EBF1D24F1D000C11211 /* XDJCalendarSelectCell.m in Sources */,
+				5C1F5ECA1D25030C00C11211 /* XDJSelectCalendarPickModel.m in Sources */,
 				5C8622F21D22544F008098E3 /* AppDelegate.m in Sources */,
-				5C6679F41D23C9EE00B557BE /* XDJCalendarPickerView.m in Sources */,
 				5C8623351D226017008098E3 /* XDJWeekView.m in Sources */,
 				5C86233B1D228172008098E3 /* DAYUtils.m in Sources */,
+				5C1F5EBC1D24F03D00C11211 /* XDJCalendarSegment.m in Sources */,
 				5C8622EF1D22544F008098E3 /* main.m in Sources */,
 				5C8623381D2271F8008098E3 /* XDJCalendarComponentView.m in Sources */,
 				5C6679E71D237ABC00B557BE /* XDJIndicatorView.m in Sources */,
 				5C6679F11D23C7EA00B557BE /* XDJCalendarSelectVIew.m in Sources */,
+				5C1F5EC71D25015400C11211 /* XDJSelectPickViewModel.m in Sources */,
 				5C667A001D23D0D800B557BE /* XDJCalendarPickCell.m in Sources */,
 				5C8623231D2254AD008098E3 /* XDJCalendarView.m in Sources */,
 				5C6679ED1D23B0E600B557BE /* UIView+Frame.m in Sources */,

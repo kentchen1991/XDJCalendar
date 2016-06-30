@@ -31,16 +31,6 @@
     return self;
 }
 
-//- (instancetype)initWithFrame:(CGRect)frame
-//{
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        [self commonInit];
-//    }
-//    return self;
-//}
-
-
 - (void)commonInit {
     self.textLabel = [[UILabel alloc] init];
     self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;

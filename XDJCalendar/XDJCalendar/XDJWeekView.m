@@ -50,7 +50,6 @@
                     make.left.equalTo(view.mas_right);
                 }];
             }
-
         }
     }
     return self;

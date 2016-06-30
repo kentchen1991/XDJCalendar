@@ -95,5 +95,9 @@
     [self sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)setDotViewHiddenValue:(BOOL)isHidden {
+    self.dotView.hidden = isHidden;
+}
+
 
 @end

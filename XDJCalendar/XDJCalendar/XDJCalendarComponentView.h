@@ -17,5 +17,7 @@
 @property (nonatomic, copy) UIColor *otherMonthTextColor;
 //@property (strong, nonatomic) EKEvent *containingEvent;
 @property (strong, nonatomic) id representedObject;
+//设置要不要显示红点
+- (void)setDotViewHiddenValue:(BOOL)isHidden;
 
 @end

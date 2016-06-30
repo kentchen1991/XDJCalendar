@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class XDJCalendarComponentView;
 @interface XDJCalendarView : UIControl
 
 @property (copy, nonatomic) NSDate *selectedDate;
@@ -29,5 +30,20 @@
  */
 @property (copy, nonatomic) UIColor *highlightedComponentTextColor;
 
-
+//所有的组件
+@property (strong, nonatomic, readonly) NSMutableArray<XDJCalendarComponentView*> *componentViews;
+@property (readonly, copy) NSString *navigationBarTitle;
+/**
+ *  将所有组件都设置红点和取消红点
+ */
+- (void)setComponentViewsSelect:(BOOL)isSelect;
+/**
+ *  初始化 并且设置是不是需要展示自定义的日历导航栏 如果不需要 可以通过 navigationBarTitle 来获取标题
+ *
+ *  @param frame  <#frame description#>
+ *  @param isNeed <#isNeed description#>
+ *
+ *  @return <#return value description#>
+ */
+- (instancetype)initWithFrame:(CGRect)frame NeedDisplayCalendarNavgationBar:(BOOL)isNeed;
 @end

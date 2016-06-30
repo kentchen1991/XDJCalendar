@@ -24,16 +24,24 @@
 @property (nonatomic, strong) UIView *contentWrapperView;
 @property (nonatomic, strong) UIView *contentView;
 @property (strong, nonatomic) NSMutableArray<XDJCalendarComponentView*> *componentViews;
-@property (readonly, copy) NSString *navigationBarTitle;
+//@property (readonly, copy) NSString *navigationBarTitle;
 @property (strong, nonatomic) XDJIndicatorView *selectedIndicatorView;
 @property (strong, nonatomic) XDJIndicatorView *todayIndicatorView;
-
 @property (nonatomic, strong) UISwipeGestureRecognizer *leftSwipeGestureRecognizer;
 @property (nonatomic, strong) UISwipeGestureRecognizer *rightSwipeGestureRecognizer;
+@property (nonatomic) BOOL isDisplayBar;
 
 @end
 
 @implementation XDJCalendarView
+
+#pragma mark - public
+- (void)setComponentViewsSelect:(BOOL)isSelect {
+    [self.componentViews enumerateObjectsUsingBlock:^(XDJCalendarComponentView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj setDotViewHiddenValue:!isSelect];//选中就不隐藏 所以取反
+    }];
+}
+
 #pragma mark - life
 - (instancetype)init {
     self = [super init];
@@ -64,6 +72,15 @@
     [self reloadViewAnimated:NO];
 }
 
+- (instancetype)initWithFrame:(CGRect)frame NeedDisplayCalendarNavgationBar:(BOOL)isNeed {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.isDisplayBar = isNeed;
+        [self commonInit];
+    }
+    return self;
+}
+
 
 #pragma mark - private
 
@@ -77,18 +94,22 @@
     NSDateComponents *comps = [DAYUtils dateComponentsFromDate:todayDate];
     self->_visibleYear = comps.year;
     self->_visibleMonth = comps.month;
-    //头部导航
-    self.navigationBar = [[XDJCalendarNavgationBar alloc] init];
-    self.navigationBar.textLabel.text = @"2016年06月";
-    [self.navigationBar setBackgroundColor:[UIColor orangeColor]];
-    [self.navigationBar addTarget:self action:@selector(navigationBarButtonDidTap:) forControlEvents:UIControlEventValueChanged];
-    [self addSubview:self.navigationBar];
-    [self.navigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(self.mas_width);
-        make.top.mas_equalTo(@0);
-        make.height.mas_equalTo(@40);
-        make.centerX.equalTo(self.mas_centerX);
-    }];
+    
+    if (_isDisplayBar) {
+        //头部导航
+        self.navigationBar = [[XDJCalendarNavgationBar alloc] init];
+        self.navigationBar.textLabel.text = @"2016年06月";
+        [self.navigationBar setBackgroundColor:[UIColor orangeColor]];
+        [self.navigationBar addTarget:self action:@selector(navigationBarButtonDidTap:) forControlEvents:UIControlEventValueChanged];
+        [self addSubview:self.navigationBar];
+        [self.navigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(self.mas_width);
+            make.top.mas_equalTo(@0);
+            make.height.mas_equalTo(@40);
+            make.centerX.equalTo(self.mas_centerX);
+        }];
+    }
+    
     
     //周几
     self.weekView = [[XDJWeekView alloc] initWithWeekNameArr:@[@"日",@"一",@"二",@"三",@"四",@"五",@"六"]];
@@ -98,7 +119,11 @@
     [self addSubview:self.weekView];
     [self.weekView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.mas_width);
-        make.top.equalTo(self.navigationBar.mas_bottom);
+        if (_isDisplayBar) {
+            make.top.equalTo(self.navigationBar.mas_bottom);
+        }else{
+            make.top.mas_equalTo(@0);
+        }
         make.height.mas_equalTo(@20);
         make.centerX.equalTo(self.mas_centerX);
     }];
@@ -150,7 +175,6 @@
         return;
     }
 }
-
 
 - (void)makeUIElements {
 
@@ -332,11 +356,11 @@
     self.todayIndicatorView.attachingView = nil;
     self.selectedIndicatorView.attachingView = nil;
     self.selectedIndicatorView.hidden = YES;
-    
-    [UIView transitionWithView:self.navigationBar.textLabel duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-        self.navigationBar.textLabel.text = self.navigationBarTitle;
-    } completion:nil];
-    
+    if (_isDisplayBar) {
+        [UIView transitionWithView:self.navigationBar.textLabel duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+           self.navigationBar.textLabel.text = self.navigationBarTitle;
+        } completion:nil];
+     }
     UIView *snapshotView = [self.contentWrapperView snapshotViewAfterScreenUpdates:NO];
     snapshotView.frame = self.contentWrapperView.frame;
     [self addSubview:snapshotView];
